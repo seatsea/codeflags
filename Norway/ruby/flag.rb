@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 require "colorize"
 
 #default22
