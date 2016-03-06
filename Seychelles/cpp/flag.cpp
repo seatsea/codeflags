@@ -10,23 +10,23 @@ enum COLORS { // these values varies in consoles, they should be factory default
 };
 
 void printFlag(int width){
-	int x = width;
-	int y = 3*x/5;
-	
-	int colors[3] = {BLACK, RED, YELLOW};
-	
-	for(int i = 0;i <= y;i++){ // print
+	int x = width-1;
+	int y = x/2;
+	for(int i = 0;i <= y;i++){
 		for(int j = 0;j <= x;j++){
-			color(colors[i/(y/3)]); printf("%c",219);
-		}
-		printf("\n");
+			if		(j*3	+ i*2 <= x) color(BLUE);
+			else if	(j*1.5 	+ i*2 <= x) color(YELLOW);
+			else if	(j/1.5	+ i*2 <= x) color(RED);
+			else if	(j/3	+ i*2 <= x) color(WHITE);
+			else color(GREEN);
+			printf("%c",219);
+		}printf("\n");
 	}
-	color(0x0f); // this is here because following text is going to be black
 }
 // *********
 int main()
 {
-	printFlag(79);
+	printFlag(80); // define your flag width here
 	getch();
 	return 0;
 }
