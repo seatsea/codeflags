@@ -1,28 +1,14 @@
 #include <stdio.h>
-#include <math.h>
-#include <conio.h>
+#include <math.h> // sin() cos()
+#include <conio.h> // getch()
 
 #define PI 3.14159265359
 // ********* WINDOWS ONLY *********
 #include <windows.h>
 void color(unsigned char color){ SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color); }
 enum COLORS { // these values varies in consoles, they should be factory default ;)
-	BLACK,
-	DARKBLUE,
-	DARKGREEN,
-	DARKCYAN,
-	DARKRED,
-	MAGENTTA,
-	ORANGE,
-	GRAY,
-	DARKGRAY,
-	BLUE,
-	GREEN,
-	CYAN,
-	RED, 
-	PINK,
-	YELLOW,
-	WHITE
+	BLACK, 	DARKBLUE, 	DARKGREEN, 	DARKCYAN, 	DARKRED, 	MAGENTTA, 	ORANGE, 	GRAY,
+	DARKGRAY, 	BLUE, 	GREEN, 		CYAN, 		RED,  		PINK, 		YELLOW, 	WHITE
 };
 // *********
 
@@ -55,7 +41,7 @@ void printFlag(int flagWidth){
 
 int main()
 {
-	printFlag(100);
+	printFlag(80);
 	getch();
 	return 0;
 }

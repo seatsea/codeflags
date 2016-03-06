@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <conio.h> // getch()
+#include <math.h> // fabs()
 
 // ********* WINDOWS ONLY *********
 #include <windows.h>
@@ -10,23 +11,21 @@ enum COLORS { // these values varies in consoles, they should be factory default
 };
 
 void printFlag(int width){
-	int x = width;
-	int y = 3*x/5;
-	
-	int colors[3] = {BLACK, RED, YELLOW};
-	
-	for(int i = 0;i <= y;i++){ // print
+	int x = width-1;
+	int y = 2*x/3;
+	for(int i = -y/2;i <= y/2;i++){
 		for(int j = 0;j <= x;j++){
-			color(colors[i/(y/3)]); printf("%c",219);
-		}
-		printf("\n");
+			if(j + fabs(i*1.5) <= x/2) color(BLUE);
+			else if(i < 0) color(WHITE);
+			else color(RED);
+			printf("%c",219);
+		}printf("\n");
 	}
-	color(0x0f); // this is here because following text is going to be black
 }
 // *********
 int main()
 {
-	printFlag(79);
+	printFlag(80); // define your flag width here
 	getch();
 	return 0;
 }
