@@ -1,7 +1,6 @@
-#include <iostream>
+#include <stdio.h>
 #include <math.h>
 #include <conio.h>
-using namespace std;
 
 #define PI 3.14159265359
 // ********* WINDOWS ONLY *********

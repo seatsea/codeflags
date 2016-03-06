@@ -1,6 +1,5 @@
-#include <iostream>
+#include <stdio.h>
 #include <conio.h>
-using namespace std;
 
 // ********* WINDOWS ONLY *********
 #include <windows.h>
