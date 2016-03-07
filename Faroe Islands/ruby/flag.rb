@@ -10,12 +10,12 @@ def b(c,a=1)
 end
 
 def line1()
-  puts b(:red, BL) + b(:white, BL/6) + b(:blue, BL/3) + b(:white, BL/6) + b(:red, BL*2)
+  puts b(:white, BL) + b(:blue, BL/6) + b(:red, BL/3) + b(:blue, BL/6) + b(:white, BL*2)
 end
 
 #sometimes this calculates incorrectly
 def line2()
-  puts b(:white, BL+(BL/6)) + b(:blue, BL/3) + b(:white, BL*2+BL/3-BL/6-BL/21)
+  puts b(:blue, BL+(BL/6)) + b(:red, BL/3) + b(:blue, BL*2+BL/3-BL/6-BL/21)
 end
 
 (BL/2).times do
@@ -25,7 +25,7 @@ end
   line2
 end
 (BL/6).times do
-  puts b(:blue, length)
+  puts b(:red, length)
 end
 (BL/12).times do
   line2
