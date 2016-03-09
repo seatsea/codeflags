@@ -15,9 +15,9 @@ void printFlag(int width){
 	double c = (double)width/(double)15;
 	
 	for(int i = 0;i < y;i++){
+		color(WHITE);
 		for(int j = 0;j < x;j++){
-			if( j/2 <= ( (width/8) + c - abs(c - fmod(i,c*2) ) ) ) color(WHITE);
-			else color(RED);
+			if( (int)(j/2 == (int)( (width/8) + c - abs(c - fmod(i,c*2) ) ) ) ) color(RED);
 			printf("%c",219);
 		}printf("\n");
 	}
@@ -25,7 +25,7 @@ void printFlag(int width){
 // *********
 int main()
 {
-	printFlag(80); // define your flag width here
+	printFlag(100); // define your flag width here
 	getch();
 	return 0;
 }
