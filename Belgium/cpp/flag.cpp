@@ -5,8 +5,8 @@
 using std::cout;
 using std::endl;
 
-#define YELLOW 	0x0E
-#define RED		0x0C
+#define YELLOW 0x0E
+#define RED	0x0C
 
 void color(unsigned char color){
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
