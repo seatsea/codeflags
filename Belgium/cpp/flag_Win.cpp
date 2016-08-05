@@ -15,7 +15,8 @@ void color(unsigned char color){
 int main(int argc, char const *argv[])
 {
 	int width = 39;
-	int height = 13 * width / 15;
+	int height = 13 * width / 15 / 2;
+	// it is all divided by 2 due to the text character ratio ;)
 	int strip = width / 3;
 
 	for(int i = 0;i <= height;i++){
