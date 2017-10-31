@@ -9,16 +9,15 @@ width = 80
 height = 30
 stripes = 3
 color = ""
-stripe_h = int(height/stripes)
-total = ""
-
+stripe_w = int(width/stripes)
 
 for i in range(0, height):
-    color_id = math.ceil(((i+1)/stripe_h) % stripe_h)
-    colors = [0, BLUE,WHITE,RED]
+    color_id = math.ceil(((i+1)/stripe_w) % stripe_w)
+    colors = [0,BLUE,WHITE,RED]
     if color_id < 1: color_id = 1
     color = colors[color_id]
 
-    print(((color+"a")*width)+END)
+    print(((color+"a")*stripe_w)+END, end="")
+    if color_id >= stripes: print("")
 
 print(END)
