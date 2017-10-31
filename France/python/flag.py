@@ -8,17 +8,15 @@ width = 80
 height = 30
 stripes = 3
 color = ""
-stripe_h=stripes/height
+stripe_h = int(height/stripes)
 total = ""
 
 
 for i in range(0, height):
-    for b in range(0, width):
-    	total += colors.BLUE + "B" + colors.END
-    for y in range(0, width):
-    	total += colors.WHITE + "W" + colors.END
-    for r in range(0, width):
-    	total += colors.RED + "R" + colors.END
+    
+	total += colors.BLUE + "B" + colors.END
+	total += colors.WHITE + "W" + colors.END
+    total += colors.RED + "R" + colors.END
 
     total += "\n"
 
