@@ -6,17 +6,18 @@ class colors:
 
 width = 80
 height = 30
-
+stripes = 3
+color = ""
+stripe_h=stripes/height
 total = ""
 
-stripew = int(width / 3)
 
 for i in range(0, height):
-    for b in range(0, stripew):
+    for b in range(0, width):
     	total += colors.BLUE + "B" + colors.END
-    for y in range(0, stripew):
-    	total += colors.WHITE + "Y" + colors.END
-    for r in range(0, stripew):
+    for y in range(0, width):
+    	total += colors.WHITE + "W" + colors.END
+    for r in range(0, width):
     	total += colors.RED + "R" + colors.END
 
     total += "\n"
